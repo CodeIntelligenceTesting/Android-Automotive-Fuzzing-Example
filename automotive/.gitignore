@@ -2,4 +2,5 @@
 /.cifuzz-build
 /.cifuzz-findings
 /.cifuzz-corpus
-/crash-*
+**/crash-*
+**Inputs/
