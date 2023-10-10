@@ -17,12 +17,27 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    cifuzz {
+        androidVariant.set("sem25") // Set to variant for flavor=full and buildType=debug
+    }
+
+    productFlavors {
+
+        sem2 {
+            dimension "brand"
+        }
+        sem25 {
+            dimension "brand"
+            applicationId "com.code_intelligence.automotivetest"
         }
     }
+
+//    buildTypes {
+//        release {
+//            minifyEnabled false
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+//        }
+//    }
 }
 
 dependencies {
